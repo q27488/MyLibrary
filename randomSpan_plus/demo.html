@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>randomSpanDemo</title>
+</head>
+<body>
+	<h3>随机字体颜色，位置偏移插件</h3>
+	<p>参数:</p>
+	<ul>
+		<li>minFontSize:最小字体</li>
+		<li>maxFontSize:最大字体</li>
+		<li>colorArr:颜色数组</li>
+		<li>marginLR:左右margin</li>
+		<li>postionBT:上下postion位移</li>
+		<li>postionLR:左右postion位移</li>
+		<li>Unit:单位，margin与字体均使用它，默认px,可选em，rem</li>
+		<li>newlineNum:换行条件</li>
+	</ul>
+
+	<div class="test" style="float: left;display: inline-block;">
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+		<span>7</span>
+		<span>8</span>
+		<span>9</span>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="./randomSpan_plus.js"></script>
+	<script>
+		var options = {
+			minFontSize:"12",                   //最小字体
+	        maxFontSize:"44",                   //最大字体
+	        colorArr:["#a1b6ea","#faa0a4","#e8c67f","#a0d1d9","#b0a7cf","#f8cba4","#b3cf97"],    //颜色数组
+	        marginLR:"22",                       //左右margin
+	        postionBT:"22",                      //上下postion位移
+	        postionLR:"22",                      //左右postion位移
+	        Unit:"px",                           //单位，margin与字体均使用它，默认px
+	        newlineNum:'2',                      //换行条件
+		}
+		$(".test").randomSpan(options);
+	</script>
+</body>
+</html>

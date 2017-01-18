@@ -497,7 +497,7 @@ var tpl = [
 	'</div>',
 	'<div class="datepicker ui-d-n">',
 	'	<div class="datepicker__mask" ></div>',
-	'	<div class="datepicker__main" style="top:320px">',
+	'	<div class="datepicker__main" style="top:264px">',
 	'		<div class="datepicker__header">',
 	'			<div class="datepicker__time-toggle"></div>',
 	'			<div class="datepicker__time-selector-list">',

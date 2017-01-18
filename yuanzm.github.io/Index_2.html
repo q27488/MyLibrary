@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+	<title>date_picker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#date {
+			margin-top: 20px;
+			width: 100px;
+			height: 35px;
+		}
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/datepicker_1.css">
+</head>
+<body>
+	<input type="text" id="date">
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/datepicker.js"></script>
+<script type="text/javascript">
+    var _date = document.getElementById('date');
+
+	var datePicker = new window.DatePicker({
+		confirmCbk: function(data) {
+            _date.value = data.year + '-' + data.month + '-' + data.day;
+		}
+	});
+
+    _date.onfocus = function(e) {
+    	_date.blur();
+		datePicker.open();
+    };
+</script>
+</html>

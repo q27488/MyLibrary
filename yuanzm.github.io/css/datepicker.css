@@ -79,8 +79,8 @@
 .datepicker__time-selector-item {
   display: inline-block;
   width: 50%;
-  height: 40px;
-  line-height: 40px;
+  height: 20px;
+  line-height: 20px;
   position: relative;
 }
 .datepicker__time-selector-arrow {
@@ -160,9 +160,9 @@
 }
 .datepicker__day-item {
   width: 14.2857%;
-  height: 30px;
+  height: 24px;
   font-size: 0.875em;
-  line-height: 40px;
+  line-height: 24px;
   text-align: center;
   display: inline-block;
   float: left;

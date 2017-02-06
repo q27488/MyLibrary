@@ -19,7 +19,7 @@
     </style>
     <link rel="stylesheet" type="text/css" href="css/datepicker.css">
 </head>
-<body style="height: 1000px;position: relative;">
+<body>
 	<input type="text" id="date">
 </body>
 <script type="text/javascript" src="js/zepto.min.js"></script>
@@ -30,6 +30,7 @@
 	var datePicker = new window.DatePicker({
 		confirmCbk: function(data) {
             _date.value = data.year + '-' + data.month + '-' + data.day;
+            console.log(_date.value);
 		}
 	});
 

@@ -1,8 +1,4 @@
-﻿.datepicker__time-selector-list{
-  text-align: center;
-}
-
-.ui-d-n {
+﻿.ui-d-n {
   display: none;
 }
 .datepicker {
@@ -39,7 +35,7 @@
   width: 100%;
   height: 100%;
   background-color: #000;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 11001;
@@ -49,16 +45,16 @@
   /* 老版Safari */
   opacity: 0;
   /* 支持opacity的浏览器*/
-  -moz-transition: -moz-opacity 0.5s linear 0s;
-  -ms-transition: -ms-opacity 0.5s linear 0s;
-  -webkit-transition: -webkit-opacity 0.5s linear 0s;
-  -o-transition: -o-opacity 0.5s linear 0s;
-  transition: opacity 0.5s linear 0s;
+  -moz-transition: -moz-opacity 0.5s ease-in 0s;
+  -ms-transition: -ms-opacity 0.5s ease 0s;
+  -webkit-transition: -webkit-opacity 0.5s ease 0s;
+  -o-transition: -o-opacity 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s;
 }
 .datepicker__main {
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 0;
   z-index: 11003;
   width: 100%;
   height: auto;
@@ -76,11 +72,14 @@
   -o-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
 }
+.datepicker__time-selector-list {
+  text-align: center;
+}
 .datepicker__time-selector-item {
   display: inline-block;
-  width: 50%;
-  height: 20px;
-  line-height: 20px;
+  width: 80%;
+  height: 36px;
+  line-height: 36px;
   position: relative;
 }
 .datepicker__time-selector-arrow {
@@ -88,8 +87,8 @@
   top: 0;
   font-size: 1.6em;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   text-align: center;
   color: #4eccc4;
 }
@@ -111,21 +110,21 @@
 }
 .datepicker__week-item {
   width: 14.2857%;
-  height: 40px;
+  height: 36px;
   text-align: center;
-  line-height: 40px;
+  line-height: 36px;
   float: left;
-  color: #4eccc4;
+  color: #696969;
   display: inline-block;
 }
 .datepicker__panel {
   overflow: hidden;
   position: relative;
-  height: 218px;
+  height: 257px;
 }
 .datepicker__day-wrap {
   width: 100%;
-  height: 218px;
+  height: 257px;
 }
 .datepicker__day-list {
   width: 100%;
@@ -160,9 +159,9 @@
 }
 .datepicker__day-item {
   width: 14.2857%;
-  height: 24px;
+  height: 36px;
   font-size: 0.875em;
-  line-height: 24px;
+  line-height: 36px;
   text-align: center;
   display: inline-block;
   float: left;
@@ -176,8 +175,8 @@
   color: #999;
 }
 .datepicker__footer {
-/*  margin-top: 10px;
-  margin-bottom: 10px;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 .datepicker__btn {

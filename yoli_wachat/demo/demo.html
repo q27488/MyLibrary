@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+</head>
+
+<body>
+    <div style="width:80%;height:50px;" id="div"></div>
+    <canvas id="canvas">
+        浏览器版本过低，请您更新最新浏览器
+    </canvas>
+    <canvas id="canvas2">
+        浏览器版本过低，请您更新最新浏览器
+    </canvas>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/sleep_canvas.js"></script>
+    <script>
+    window.onload = function() {
+        draw_Arc({
+            c_width:400,
+            c_height:600,
+            c_Id: "canvas",
+            circle_radius: "80",
+            arc_radius: "100",
+            arc_lineWidth: "10"
+        })
+    }
+    </script>
+</body>
+
+</html>

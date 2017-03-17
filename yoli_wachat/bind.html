@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>当前状态</title>
+    <link rel="stylesheet" type="text/css" href="lib/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/kh_public.css">
+    <link rel="stylesheet" type="text/css" href="css/dqztcss.css">
+</head>
+<body>
+<div id="pageContain">
+    <div class="now_state page page1 current">
+        <div class="user_face" >
+            <img src="img/face_img01.png" alt="">
+        </div>
+        <div class="round_xz" >
+            <div class="max_img">
+                <img src="img/max_round_img.png" alt="">
+            </div>
+            <div class="xuanz">
+                <img src="img/saomiao_img.png" alt="">
+            </div>
+            <div class="wenz">昨夜睡眠</div>
+        </div>
+
+        <div class="band_sueess">
+            <div class="jiance">
+                <div class="left">
+                    <div class="huxi">呼吸正常</div>
+                    <div class="txt">0</div>
+                </div>
+                <div class="right">
+                    <div class="xint">心跳正常</div>
+                    <div class="txt">0</div>
+                </div>
+                <!-- <div class="clear"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="page page2">
+         <div class="cancel_btn" onclick="_onclik()">
+            解除绑定
+        </div>
+    </div>
+</div>
+
+<!-- 解除绑定弹窗 -->
+<div class="maskCan-wrapper" style="position: fixed; top: 0px; left: 0px; height: 100%; width: 100%; z-index: 100; background: rgba(0, 0, 0,0.5 ); display: none">
+    <div class="mask-content" style="margin:50% 20%;padding: 0 10%;border-radius:5px;background:#d9e6d5;text-align: center;width: 60%;font-size: 14px;line-height: 56px;">
+            <p class="text" style="display: inline-block;color:#666;">确定解绑设备吗？</p>
+            <div>
+                <button class="confirm" style="width: 40%;height: 30px;border-radius: 5px;border: none;background: #35b35f;font-size: 14px;margin-right: 14%;" onclick="confirmBtn()">确定</button>
+                <button class="cancel" style="width: 40%;height: 30px;border-radius: 5px;border: none;background: #cad3c7;font-size: 14px;" onclick="cancelBtn()">取消</button>
+            </div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="lib/js/jquery-1.9.1.min.js" ></script>
+    <script type="text/javascript" src="lib/js/fullPage.min.js" ></script>
+    <script type="text/javascript" src="lib/js/public/zkzk_mask_box.js" ></script>
+    <script type="text/javascript" src="js/bind.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定设备</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	</head>
+	<body>
+		<h3 id='result'></h3>
+		<button id="bindBtn" style="font-size: 1.2em; color: red; font-weight: bold;">
+			绑定设备
+		</button>
+		<script src="js/jquery-3.1.0.min.js"></script>
+
+		<script>
+        	//向服务器获取微信扫描二维码权限所需要的配置信息;
+        	$.ajax({
+			    type: 'post', //请求方式;
+			    url: 'jssdk-config',  //请求的url;
+			    data:{ 	//请求参数;
+
+			    },
+		        cache:false,
+		        dataType:'json', //响应数据格式;
+		        success:function(data) {
+		        	if (data.code == 66666) {
+		        		//进行微信二维码扫描授权;
+		        		wx.config({
+		        			debug: data.debug,
+		        			appId: data.appId,
+		        			timestamp: data.timestamp,
+		        			nonceStr: data.nonceStr,
+		        			signature: data.signature,
+		        			jsApiList: [data.jsApiList]
+		        		});
+		        	}
+		        },
+		        error:function(XMLHttpRequest, textStatus, errorThrown) {
+		        	alert(XMLHttpRequest.status);
+					alert(XMLHttpRequest.readyState);
+					alert(textStatus);
+		        }
+			});
+
+            //微信二维码扫描授权通过回调函数;
+            wx.ready(function() {
+            	$('#result').html('授权通过');
+            	$('#bindBtn').click(function() {
+            		wx.scanQRCode({
+	        		    needResult: 1, //默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+	                    scanType: ["qrCode"], //指定扫二维码
+	                    success: function (res) {
+	                    	//如果扫码成功, 则请求绑定设备;
+	                        bindDevice(res.resultStr);
+	                    }
+		            });
+            	});
+            });
+	        //权限获取失败;
+	        wx.error(function(res) {
+	            // $('#result').append(res+"<br/>");
+	            alert(res);
+	        });
+
+	        function bindDevice(deviceCode) {
+	        	$('#result').html(deviceCode);
+	        	$.ajax({
+				    type: 'post', //请求方式;
+				    url: 'bind',  //请求的url;
+				    data:{ //请求参数;
+				    	code: deviceCode
+				    },
+			        cache:false,
+			        dataType:'json', //响应数据格式;
+			        success:function(data) {
+			        	if (data.code == 66666) {
+			        		$('#result').html("授权通过: "+data.msg);
+			        	}
+			        },
+			        error:function(XMLHttpRequest, textStatus, errorThrown) {
+			        	alert(XMLHttpRequest.status);
+						alert(XMLHttpRequest.readyState);
+						alert(textStatus);
+			        }
+				});
+	        }
+		</script>
+	</body>
+</html>

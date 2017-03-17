@@ -146,12 +146,12 @@ body {
 }
 
 
-/*.now_state>.round_xz>.wenz:hover{
+.now_state>.round_xz>.wenz:hover{
     background-image: -moz-linear-gradient(top, rgba(50,50,50,0.15), rgba(26,26,26,0.15));
     background: -o-linear-gradient(top, rgba(50,50,50,0.15) 0%, rgba(26,26,26,0.15) 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(50,50,50,0.15)), color-stop(1, rgba(26,26,26,0.15)));
     box-shadow: 0px 0px 12px #1b442a;
-}*/
+}
 
 .bandi_btn {
     position: absolute;

@@ -7,6 +7,7 @@ window.onload = function() {
         $("body").html('<h1 style="display:block;margin:200px margin;text-align:center">请使用手机浏览器打开本页面</h1>');
         // alert("请使用手机浏览器打开本页面");
     } else {
+        $(".wenz").show();
         var runPage = new FullPage({
 
             id: 'pageContain', // id of contain

@@ -62,37 +62,37 @@
             $("body").html('<h1 style="display:block;margin:200px margin;text-align:center">请使用手机浏览器打开本页面</h1>');
             alert("请使用手机浏览器打开本页面");
         } else {
-
+            $(".wenz").show();
             domInit();
 
             //向服务器获取微信扫描二维码权限所需要的配置信息;
-            $.ajax({
-                type: 'post', //请求方式;
-                url: 'https://www.intellihealth.cn/wx/jssdk-config', //请求的url;jssdk-config
-                data: { //请求参数;
+            // $.ajax({
+            //     type: 'post', //请求方式;
+            //     url: 'https://www.intellihealth.cn/wx/jssdk-config', //请求的url;jssdk-config
+            //     data: { //请求参数;
 
-                },
-                cache: false,       //不使用缓存
-                dataType: 'json', //响应数据格式;
-                success: function(data) {
-                    if (data.code == 66666) {
-                        //进行微信二维码扫描授权;
-                        wx.config({
-                            debug: data.debug,
-                            appId: data.appId,
-                            timestamp: data.timestamp,
-                            nonceStr: data.nonceStr,
-                            signature: data.signature,
-                            jsApiList: [data.jsApiList]
-                        });
-                    }
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    // alert(XMLHttpRequest.status);
-                    // alert(XMLHttpRequest.readyState);
-                    // alert(textStatus);
-                }
-            });
+            //     },
+            //     cache: false,       //不使用缓存
+            //     dataType: 'json', //响应数据格式;
+            //     success: function(data) {
+            //         if (data.code == 66666) {
+            //             //进行微信二维码扫描授权;
+            //             wx.config({
+            //                 debug: data.debug,
+            //                 appId: data.appId,
+            //                 timestamp: data.timestamp,
+            //                 nonceStr: data.nonceStr,
+            //                 signature: data.signature,
+            //                 jsApiList: [data.jsApiList]
+            //             });
+            //         }
+            //     },
+            //     error: function(XMLHttpRequest, textStatus, errorThrown) {
+            //         // alert(XMLHttpRequest.status);
+            //         // alert(XMLHttpRequest.readyState);
+            //         // alert(textStatus);
+            //     }
+            // });
         }
     }
 

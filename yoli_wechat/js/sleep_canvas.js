@@ -107,7 +107,7 @@ function draw_Arc(options) {
         /*功能：移动端适配-P6点位移*/
         P4_disp = 0;
         /*功能：移动端适配-P6点位移*/
-        P6_disp = 0;
+        P6_disp = -1;
 
         if(ops.c_width >= 359 && ops.c_width <= 410){	//荣耀8，小米适配
         	add_cirR = 4;

@@ -1,0 +1,14 @@
+ Listening on http://127.0.0.1:8080
+127.0.0.1 - GET / HTTP/1.1 200 493 - 8.029 ms
+127.0.0.1 - GET /login.html HTTP/1.1 304 - - 7.831 ms
+127.0.0.1 - GET /css/test-page.css HTTP/1.1 304 - - 7.772 ms
+127.0.0.1 - GET /js/jquery-3.1.0.min.js HTTP/1.1 304 - - 6.295 ms
+127.0.0.1 - GET /js/jquery.cookie.js HTTP/1.1 304 - - 5.394 ms
+127.0.0.1 - GET /js/md5.js HTTP/1.1 304 - - 6.915 ms
+127.0.0.1 - GET /js/bcrypt.js HTTP/1.1 304 - - 7.473 ms
+127.0.0.1 - GET /js/login.js HTTP/1.1 304 - - 0.666 ms
+127.0.0.1 - POST /timestamp HTTP/1.1 404 23 - 2.386 ms
+127.0.0.1 - GET /css/test-page.css HTTP/1.1 304 - - 0.640 ms
+127.0.0.1 - POST /user/salt HTTP/1.1 404 23 - 24.409 ms
+172.16.1.98 - GET /hotelManage/tempSetup.html HTTP/1.1 404 39 - 10.901 ms
+172.16.1.98 - GET /favicon.ico HTTP/1.1 404 24 - 1.227 ms

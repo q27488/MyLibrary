@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>忘记密码</title>
+    <link rel="stylesheet" href="css/test-page.css"/>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/bcrypt.js" ></script>
+    <script type="text/javascript" src="js/md5.js" ></script>
+</head>
+<body>
+    <div id="result" style="color: red; font-size: 1.2em; width: 100%; margin-left: 0px; text-align: left;">
+    </div>
+    <div>
+        <h1 style="color: blue;">忘记密码</h1>
+        <label>账号:</label>
+        <br><br>
+        <input id="phone" type="text" placeholder="请输入邮箱/手机号"/>
+        <br><br>
+        <label>新密码:</label>
+        <br><br>
+        <input id="password" type="password" placeholder="请输入密码"/>
+        <br><br>
+        <button onclick="getCode()">获取验证码</button>
+        <br><br>
+        <input id="verifyCode" type="text" placeholder="请输入验证码"/>
+        <br><br>
+        <button onclick="register()">忘记密码</button>   
+    </div>
+    
+    <script type="text/javascript" src="js/jquery.cookie.js" ></script>
+    <script type="text/javascript" src="js/forget.js" ></script>
+</body>
+</html>

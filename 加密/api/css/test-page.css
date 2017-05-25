@@ -1,0 +1,24 @@
+body html {
+	width: 100%;
+	max-width: 100px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+div {
+	width: 80%;
+	text-align: left;
+	margin-left: 10%;
+}
+input {
+	font-size: 1.3em;
+	border-radius: 10px 10px 10px 10px;
+	width: 100%;
+}
+label {
+	font-size: 1.3em;
+}
+button {
+	font-size: 1.3em;
+	width: 60%;
+	border-radius: 10px 10px 10px 10px;
+}

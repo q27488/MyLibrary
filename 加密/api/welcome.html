@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>模拟首页</title>
+		<link rel="stylesheet" href="css/test-page.css" />
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="js/md5.js" ></script>
+	</head>
+	<body>
+		<div id="result" style="color: red; font-size: 1.2em; width: 100%; margin-left: 0px; text-align: left;">
+        </div>
+        
+        <div>
+        	<br/>
+        	<button onclick="loginOut()">退出登录</button>
+        	<br/>
+        </div>
+        
+		<script type="text/javascript" src="js/mqttws31.min.js" ></script>
+		<script type="text/javascript" src="js/zkzkmqtt.js" ></script>
+		<script type="text/javascript" src="js/user-mqtt-listener.js" ></script>
+		<script type="text/javascript" src="js/welcome.js" ></script>
+		<script type="text/javascript">
+		    //页面加载完成后, 检测当前登录是否有效(是否在别的设备上有过登录)
+			$(function() {
+				tokenCheck();
+			});
+		</script>
+	</body>
+</html>

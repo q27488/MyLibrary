@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.wrap{
+			position: relative;
+			width: 200px;
+			left: 50px;
+			top: 50px
+		}
+		ul{
+			padding: 15px 0;
+			margin: 0;
+			list-style: none;
+			background: #6c6669;
+			color: #fff;
+			border-right-width: 0;
+		}
+		li{
+			display: block;
+			height: 30px;
+			line-height: 30px;
+			padding-left: 12px;
+			cursor: pointer;
+			font-size: 14px;
+			position: relative;
+		}
+		li.active{
+			background: #999395;
+		}
+		li span:hover{
+			color: #c81623;
+		}
+
+		.none{
+			display: none;
+		}
+		#sub{
+			position: absolute;
+			width: 600px;
+			border:1px solid #f7f7f7;
+			background: #f7f7f7;
+			box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+			left: 200px;
+			top: 0;
+			box-sizing:border-box;
+			margin: 0;
+			padding: 10px;
+		}
+
+		.sub-content a{
+			font-size: 12px;
+			color: #666;
+			text-decoration: none;
+		}
+
+		.sub-content dd a{
+			border-right:1px solid #e0e0e0;
+			padding: 0 10px;
+			margin: 4px 0;
+		}
+
+		.sub-content dl{
+			overflow: hidden;
+		}
+
+		.sub-content dt{
+			float: left;
+			width: 70px;
+			font-weight: bold;
+			clear: both;
+			position: relative;
+		}
+
+		.sub-content dd{
+			float: left;
+			margin-left: 5px;
+			border-top: 1px solid #eee;
+			margin-bottom: 5px;
+		}
+
+		.sub-content dt i{
+			width:4px;
+			height: 14px;
+			font: 400 9px/14px consolas;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap" id="test">
+		<ul>
+			<li data-id="a">
+				<span>家用家电</span>
+			</li>
+			<li data-id="b">
+				<span>手机 / 运营商 / 数码</span>
+			</li>
+			<li data-id="c">
+				<span>电脑办公</span>
+			</li>
+			<li data-id="d">
+				<span>家居 / 家具 / 家装 / 厨具</span>
+			</li>
+			<li data-id="e">
+				<span>男装 / 女装 / 童装 / 内衣</span>
+			</li>
+			<li data-id="f">
+				<span>个人化妆 / 清洁用品 / 宠物</span>
+			</li>
+			<li data-id="g">
+				<span>鞋靴 / 箱包 / 珠宝 /奢侈品</span>
+			</li>
+			<li data-id="h">
+				<span>运动 / 户外 / 钟表</span>
+			</li>
+			<li data-id="i">
+				<span>汽车 / 汽车用品</span>
+			</li>
+		</ul>
+		<div id="sub" class="none">
+			<div id="a" class="sub-content none">
+				<dl>
+					<dt>
+						<a href="#">电视<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">合资品牌</a>
+						<a href="#">国产品牌</a>
+						<a href="#">互联网品牌</a>
+						<a href="#">合资品牌</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#">空调<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">壁挂式空调</a>
+						<a href="#">柜式空调</a>
+						<a href="#">中央空调</a>
+						<a href="#">空调配件</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#">洗衣机<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">壁挂式空调</a>
+						<a href="#">柜式空调</a>
+						<a href="#">中央空调</a>
+						<a href="#">空调配件</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#">冰箱<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">壁挂式空调</a>
+						<a href="#">柜式空调</a>
+						<a href="#">中央空调</a>
+						<a href="#">空调配件</a>
+					</dd>
+				</dl>
+			</div>
+			<div id="b" class="sub-content none">
+				<dl>
+					<dt>
+						<a href="#">手机<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">合资品牌</a>
+						<a href="#">国产品牌</a>
+						<a href="#">互联网品牌</a>
+						<a href="#">合资品牌</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#">运营商<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">壁挂式空调</a>
+						<a href="#">柜式空调</a>
+						<a href="#">中央空调</a>
+						<a href="#">空调配件</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#">数码<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">壁挂式空调</a>
+						<a href="#">柜式空调</a>
+						<a href="#">中央空调</a>
+						<a href="#">空调配件</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#">冰箱11123123<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">壁挂式空调1231</a>
+						<a href="#">柜式空调123</a>
+						<a href="#">中央空调13</a>
+						<a href="#">空调配件1</a>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>
+						<a href="#">冰箱11123123<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">壁挂式空调1231</a>
+						<a href="#">柜式空调123</a>
+						<a href="#">中央空调13</a>
+						<a href="#">空调配件1</a>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>
+						<a href="#">冰箱11123123<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">壁挂式空调1231</a>
+						<a href="#">柜式空调123</a>
+						<a href="#">中央空调13</a>
+						<a href="#">空调配件1</a>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>
+						<a href="#">冰箱11123123<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">壁挂式空调1231</a>
+						<a href="#">柜式空调123</a>
+						<a href="#">中央空调13</a>
+						<a href="#">空调配件1</a>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>
+						<a href="#">冰箱11123123<i>&gt;</i></a>
+					</dt>
+					<dd>
+						<a href="#">壁挂式空调1231</a>
+						<a href="#">柜式空调123</a>
+						<a href="#">中央空调13</a>
+						<a href="#">空调配件1</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<script src="./jquery-1.9.1.min.js"></script>
+	<script src="./function.js"></script>
+	<script src="./megadropdown.js"></script>
+</body>
+</html>
